@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Assistant', sans-serif;
+}
+.bg{
+    height: 100vh;
+    /* background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%); */
+    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    background: rgba(255, 255, 255, 0.612);
+    width: 500px;
+    height: 320px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.main-container h1{
+    color: #222f3e;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.form-container{
+    margin-top: 60px;
+}
+.main-form{
+    display: grid;
+    grid-template-columns: 230px;
+    grid-template-rows: repeat(3, 30px);
+    gap: 20px;
+    justify-items: center;
+    justify-content: center;
+    /* display: flex;
+    flex-direction: column; */
+}
+.main-form input{
+    background: rgba(255, 255, 255, 0.829);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+.main-form button{
+    border: none;
+    outline: none;
+    padding: 10px 20px 30px 20px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #0a3d62;
+}
+.main-form button:hover{
+    background-color: #ED4C67;
+}
+
+.error-bg{
+    margin-top: 20px;
+    color: #ED4C67;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.729);
+    border-radius: 10px;
+
+}

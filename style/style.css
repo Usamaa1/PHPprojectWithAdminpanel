@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 20px 50px;
+  color: #0d1e2d;
+  scroll-behavior: smooth;
+  background-color: #fcfcfc;
+}
+
+/* navbar */
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.name {
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+.name a{
+  color: #0d1e2d;
+  text-decoration: none;
+}
+.occupation {
+  font-size: 1.2rem;
+  color: #636e72;
+}
+
+.hamburger{
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+  position: relative;
+}
+
+
+.site-links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-links span {
+  margin-right: 20px;
+}
+.site-links span a {
+  color: #636e72;
+  text-decoration: none;
+  font-weight: 900;
+  padding-bottom: 8px;
+  transition: transform 0.5s ease-in-out;
+}
+.site-links span a:hover {
+  color: #5352ed;
+  border-bottom: 2px solid #5352ed;
+}
+
+.change{
+  background-color: #fcfcfc;
+  height: 100vh;
+  width: 100px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  z-index:  1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Main content */
+
+.main-content {
+  margin: 0px 70px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 60px;
+}
+.greet {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  margin: 30px 10px;
+}
+.clr {
+  color: #5352ed;
+  border-bottom: 2px solid #5352ed;
+  padding-bottom: 3px;
+}
+hr {
+  width: 30%;
+}
+.info {
+  font-size: 1.8rem;
+}
+.portfolio-heading {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: 900;
+  margin: 40px 0px;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 20px;
+}
+.project {
+  width: 500px;
+  margin: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background: #ffff;
+  border-radius: 5px;
+}
+.project a{
+  color: #0d1e2d;
+  text-decoration: none;
+}
+.project img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px 5px 0 0;
+}
+.project:hover img {
+  filter: grayscale(90%);
+}
+.project:hover {
+  transform: scale(1.1);
+}
+.proj-text {
+  margin: 5px;
+}
+.proj-text .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.proj-text .desc {
+  font-size: 1.1rem;
+  margin-top: 8px;
+
+}
+
+/* footer */
+
+.footer-heading {
+  margin-top: 70px;
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-icons i {
+  margin: 30px 40px;
+  font-size: 2.3rem;
+  cursor: pointer;
+  color: #5352ed;
+}
+.social-icons i:hover {
+  color: #786fa6;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 30px 0px;
+}
+
+/* scrollbar  */
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2f3640;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2c3138;
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 700px) {
+  .name {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  .occupation {
+    font-size: 1rem;
+    color: #636e72;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+  .intro {
+    margin: 60px 10px;
+  }
+  .greet {
+    font-size: 1.3rem;
+  }
+  .info {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .site-links {
+    display: none;
+    width: 80%;
+    flex-direction: column;
+  }
+  .site-links.show{
+    display: flex;
+  }
+  .hamburger{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  hr {
+    width: 50%;
+  }
+  .projects{
+    margin: 0;
+  }
+  body{
+    margin: 0px 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-content {
+    margin: 0px;
+  }
+  .social-icons i {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .social-icons {
+    flex-direction: column;
+  }
+  .nav-logo {
+    display: none;
+  }
+  .footer-heading h1 {
+    font-size: 1.5rem;
+  }
+  .proj-text .title {
+    font-size: 1.5rem;
+  }
+  .proj-text .desc {
+    font-size: 1rem;
+  }
+  .footer-bottom {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  hr {
+    width: 100%;
+  }
+  .greet {
+    font-size: 1.1rem;
+  }
+}
